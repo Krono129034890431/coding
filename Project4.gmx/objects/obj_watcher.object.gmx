@@ -29,11 +29,33 @@
 image_speed = .1;
 spd = 0;
 alarm[0] = room_speed*irandom_range(2, 5);
-sight = 32;
+sight = 128;
 xaxis = 0;
 yaxis = 0;
-projectile_limit = 1;
-projectile_amount = 0;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Projectile alarm
 </string>
           </argument>
         </arguments>
@@ -102,7 +124,10 @@ projectile_amount = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>state = scr_check_for_player()
+            <string>if alarm[2] == -1{
+    state = scr_check_for_player()
+    alarm[2] = 120
+}
 </string>
           </argument>
         </arguments>

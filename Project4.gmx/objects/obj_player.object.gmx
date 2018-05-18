@@ -102,24 +102,6 @@ if (place_meeting(x, y+vsp, obj_wall))
     vsp = 0;
 }
 y += vsp;
-
-//Vertical Collision With Lava
-if (place_meeting(x, y, obj_lava))
-{
-    instance_destroy()
-    show_message("You Died")
-}
-
-//Animate
-if (move != 0) image_xscale = move;
-if (place_meeting(x,y+1,obj_wall))
-{
-    if (move != 0) sprite_index = spr_player
-}
-else
-{
-    if(vsp &lt; 0) sprite_index = spr_player
-}
 </string>
           </argument>
         </arguments>
